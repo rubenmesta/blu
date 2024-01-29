@@ -1,0 +1,91 @@
+//VARIABLES
+$btn-border-radius: 4px;
+
+// FUNCTIONS
+@function calculateRem($size) {
+  $remSize: $size / 16;
+
+  @return #{$remSize}rem;
+}
+
+// MIXINS
+@mixin font-size($size) {
+  font-size: $size + px; //Fallback in px
+  font-size: calculateRem($size);
+}
+
+//FONTS
+@mixin montserrat {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+@mixin montserrat-bold {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+@mixin prata {
+  font-family: 'Prata', serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+// BUTTON
+@mixin button {
+  border: 2px solid $primary-neutral;
+  border-radius: $btn-border-radius;
+  text-transform: uppercase;
+  height: auto;
+  line-height: 3.125em;
+  padding: 0.625em 1.875em;
+  letter-spacing: 1px;
+  font-weight: 600;
+  line-height: 1.75em;
+  white-space: normal;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+
+  @include montserrat-bold;
+
+  @include font-size(16);
+}
+
+// BREAK points
+@mixin breakpoint($break) {
+  @if $break == small {
+    @media only screen and (max-width: 768px) {
+      @content;
+    }
+  } @else if $break == medium {
+    @media only screen and (min-width: 769px) {
+      @content;
+    }
+  } @else if $break == large {
+    @media only screen and (min-width: 900px) {
+      @content;
+    }
+  } @else if $break == xlarge {
+    @media only screen and (min-width: 1025px) {
+      @content;
+    }
+  } @else if $break == xxlarge {
+    @media only screen and (min-width: 1367px) {
+      @content;
+    }
+  }
+}
+
+// CUSTOM MIN & MAX BREAK POINTS
+@mixin custom-min-breakpoint($min) {
+  @media only screen and (min-width: $min) {
+    @content;
+  }
+}
+@mixin custom-max-breakpoint($max) {
+  @media only screen and (max-width: $max) {
+    @content;
+  }
+}

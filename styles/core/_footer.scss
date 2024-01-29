@@ -1,0 +1,22 @@
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  background-color: darken(desaturate($primary-color, 4%), 38%);
+  padding-top: calc(var(--responsive-padding) * 2);
+}
+
+
+footer p {
+    @include montserrat;
+    color:$primary-neutral-light;
+}
+footer img {
+  width: 52px;
+}
+footer a {
+  color: $complementary-neutral-light;
+  text-decoration: none;
+}

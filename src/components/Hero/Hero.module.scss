@@ -1,0 +1,103 @@
+@import '../../../styles/core/mixins';
+@import '../../../styles/core/variables';
+/* hero */
+
+.hero {
+  position: relative;
+  top: 0;
+  background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
+  height: auto;
+  width: 100vw;
+}
+.pageshero {
+  position: relative;
+  top: 0;
+  background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
+  height: auto;
+  width: 100vw;
+}
+
+.heroImage {
+  height: 700px;
+  height: auto;
+  width: 100vw;
+}
+.imageResponsive {
+  vertical-align: middle;
+  border-style: none;
+  width: 100%;
+  height: auto;
+  border-style: none;
+}
+.pagesHeroImage {
+  height: 500px;
+}
+
+.homeTitle,
+.pagesTitle {
+  @include montserrat;
+
+  font-size: 2.3em;
+  color: $primary-gray;
+  position: absolute;
+  top: 35%;
+  left: 15%;
+}
+.homeTitle span {
+  @include prata;
+  color: $white;
+  font-size: 84px;
+  display: flex;
+  position: relative;
+  left: -20px;
+  top: 10px;
+}
+.pagesTitle span {
+  @include prata;
+  color: $white;
+  font-size: 84px;
+  position: relative;
+  left: -20px;
+  left: -10px;
+  top: 10px;
+}
+
+@include breakpoint(small) {
+  .hero {
+    width: 100%;
+  }
+  .heroImage,
+  .pagesHeroImage {
+    height: 400px;
+  }
+  .homeTitle,
+  .pagesTitle {
+    color: $white;
+    font-size: 1.5em;
+    top: 30%;
+  }
+  .homeTitle span {
+    font-size: 3rem;
+  }
+  .pagesTitle span {
+    font-size: 4rem;
+    left: 0;
+    top: 25px;
+  }
+}
+
+@include breakpoint(medium) {
+  .heroImage {
+    height: 500px;
+  }
+}
+
+@include breakpoint(xlarge) {
+  .heroImage {
+    height: 850px;
+  }
+}

@@ -1,0 +1,76 @@
+@import "variables";
+// from Natalya Shelburne's Sass formulas
+
+.primary-color {
+	background-color: $primary-color;
+	color: text-color($primary-color);
+}
+.complementary-color {
+	background-color: $complementary-color;
+	color: text-color($complementary-color);
+}
+
+
+// Complementary Neutrals, highlight, midtone, shadow
+.complementary-neutral {
+	background-color: $complementary-neutral;
+	color: text-color($complementary-neutral);
+}
+.complementary-neutral-light {
+	background-color: $complementary-neutral-light;
+	color: text-color($complementary-neutral-light);
+}
+.complementary-neutral-dark {
+	background-color: $complementary-neutral-dark;
+	color: text-color($complementary-neutral-dark);
+}
+
+// Primary neutrals, highlight, midtone, shadow`
+.primary-neutral {
+	background-color: $primary-neutral;
+	color: text-color($primary-neutral);
+}
+.primary-neutral-light {
+	background-color: $primary-neutral-light;
+	color: text-color($primary-neutral-light);
+}
+.primary-neutral-dark {
+	background-color: $primary-neutral-dark;
+	color: text-color($primary-neutral-dark);
+}
+
+// Primary tint and shade
+.primary-light {
+	background-color: $primary-light;
+	color: text-color($primary-light);
+}
+.primary-dark {
+	background-color: $primary-dark;
+	color: text-color($primary-dark);
+}
+.complementary-light {
+	background-color: $complementary-light;
+	color: text-color($complementary-light);
+}
+
+// Pure neutrals, highlight, midtone, shadow
+.white {
+	background-color: $white;
+	color: text-color($white);
+}
+.neutral-gray {
+	background-color: $neutral-gray;
+	color: text-color($neutral-gray);
+}
+.primary-gray {
+	background-color: $primary-gray;
+	color: text-color($primary-gray);
+}
+.complementary-gray {
+	background-color: $complementary-gray;
+	color: text-color($complementary-gray);
+}
+.black {
+	background-color: $black;
+	color: text-color($black);
+}

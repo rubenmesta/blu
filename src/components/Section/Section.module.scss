@@ -1,0 +1,285 @@
+@import '../../../styles/core/variables';
+@import '../../../styles/core/mixins';
+@import '../../../styles/core/colors';
+
+/* Start menu section */
+$span-light: #f9fafb;
+$span-dark: #2b2b2b;
+
+$width-base: 100%;
+$width-mobile: 70%;
+$width-tablet: 60%;
+$width-desktop: 50%;
+
+// :root {
+//   --button-width: #{$width-mobile};
+
+//   --span-color: #{$span-light};
+
+//   --letter-spacing-span: var(--margin-xxs);
+// }
+
+%section-content {
+  background-color: $white;
+  padding: calc(var(1rem * 4));
+  width: 50%;
+
+  h2 {
+    @include prata;
+
+    font-size: var(--text-h2);
+    color: $primary-neutral-light;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    letter-spacing: calc(var(--letter-spacing-span) * 2);
+    font-weight: 400;
+    margin-bottom: var(--margin-sm);
+
+    span {
+      @include montserrat;
+      position: absolute;
+      text-transform: none;
+      font-size: var(--text-normal);
+      letter-spacing: var(--letter-spacing-span);
+      color: var(--span-color);
+      display: inline-block;
+    }
+  }
+  .menuContent {
+    .button {
+      width: var(--button-width);
+      margin: var(--margin-lg) 0;
+    }
+
+    p {
+      font-size: var(--text-normal);
+      line-height: var(--body-line-height);
+    }
+  }
+}
+
+section .content {
+  display: flex;
+  flex-direction: row;
+  max-width: 1400px;
+  justify-content: center;
+  margin: 0 auto;
+  height: auto;
+}
+.imgSideMenu,
+.img-side-private {
+  height: auto;
+}
+.main,
+.private {
+  //  @extend copySide;
+  padding: 0 calc(var(--responsive-padding) * 2);
+  background-color: $primary-neutral-light;
+}
+.menuContent {
+  @include montserrat;
+  display: flex;
+  flex-direction: column;
+}
+.subtitle {
+  @include montserrat;
+  color: $complementary-neutral;
+  margin: 0;
+  font-size: var(--text-md);
+}
+
+.main .content {
+  margin-top: var(--margin-xl);
+}
+.private .content {
+  padding-bottom: calc(var(--responsive-padding) * 5);
+}
+.copySide {
+  background-color: $white;
+  padding: calc(var(1rem * 4));
+  width: 50%;
+
+  h2 {
+    @include prata;
+
+    font-size: var(--text-h2);
+    color: $primary-neutral-light;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    letter-spacing: calc(var(--letter-spacing-span) * 2);
+    font-weight: 400;
+    margin-bottom: var(--margin-sm);
+
+    span {
+      @include montserrat;
+      position: absolute;
+      text-transform: none;
+      font-size: var(--text-normal);
+      letter-spacing: var(--letter-spacing-span);
+      color: var(--span-color);
+      display: inline-block;
+    }
+  }
+  .menuContent {
+    .button {
+      width: var(--button-width);
+      margin: var(--margin-lg) 0;
+    }
+
+    p {
+      font-size: var(--text-normal);
+      line-height: var(--body-line-height);
+    }
+  }
+}
+
+@include breakpoint(small) {
+  .main,
+  .private {
+    margin: 0 auto;
+    padding: 0;
+  }
+  .main .content {
+    background-color: $primary-dark;
+    margin-top: 0;
+    color: $white;
+  }
+  .private .content {
+    margin-bottom: 0;
+  }
+
+  section.main {
+    border-bottom: 1px solid $primary-neutral;
+  }
+
+  .copySide {
+    background: transparentize(rgba(0, 0, 0, 0.1), 0.1);
+    width: 100%;
+    padding: calc(var(--responsive-padding) * 1.5);
+
+    h2 {
+      line-height: calc(1em / var(--body-line-height));
+      color: $white;
+      position: inherit;
+
+      span {
+        margin-top: var(--margin-xxs);
+        text-align: left;
+      }
+    }
+  }
+  .main,
+  .private {
+    padding: 0;
+  }
+}
+@include breakpoint(medium) {
+  %image {
+    background-size: cover;
+    background-position: center;
+    height: auto;
+    width: #{$width-desktop};
+  }
+  .main,
+  .private {
+    padding: 0;
+
+    .imgSideMenu {
+      @extend %image;
+      background-image: url('../../../public/img/chef-cooking2.jpg'); //https://www.pexels.com/
+    }
+    .img-side-private {
+      @extend %image;
+      //   background-image: url('../../img/blu-homepage-menu2.jpg'); // https://www.pexels.com/
+    }
+    .imgSideMenu--special {
+      @extend %image;
+      //   background-image: url('../../img/events.jpg'); //https://www.pexels.com/
+    }
+    .img-side-private--special {
+      @extend %image;
+      //   background-image: url('../../img/happy-hour.jpg'); // https://www.pexels.com/
+    }
+    .imgSideMenu--pd {
+      @extend %image;
+      //   background-image: url('../../img/private.jpg'); //https://www.pexels.com/
+    }
+    .img-side-private--pd {
+      @extend %image;
+      //   background-image: url('../../img/bar.jpg'); // https://www.pexels.com/
+    }
+  }
+  .copySide {
+    padding: calc(var(--responsive-padding) * 2);
+
+    span {
+      font-size: var(--text-normal);
+      position: absolute;
+      text-align: center;
+      width: #{$width-base};
+      left: 0;
+      top: 46%;
+      transform: translateY(-50%);
+      font-weight: 400;
+      --span-color: #{$span-dark};
+    }
+  }
+
+  //   :root {
+  //     --button-width: #{$width-tablet};
+  //   }
+}
+
+@include custom-max-breakpoint(899px) {
+  .copySide.table {
+    width: 90%;
+    margin: 1em;
+    padding: var(--responsive-padding);
+
+    h2 {
+      font-size: 3rem;
+      span {
+        font-size: calc(var(--text-small) * 1.15);
+      }
+    }
+  }
+}
+
+@include custom-min-breakpoint(900px) {
+  %image--menu {
+    width: #{$width-base};
+    background-size: cover;
+    background-position: center;
+    height: auto;
+    width: 50%;
+  }
+  .imgSideMenu--menu {
+    @extend %image--menu;
+    // background-image: url('../../img/wine.jpg'); //https://www.pexels.com
+  }
+  .img-side-private--menu {
+    @extend %image--menu;
+    // background-image: url('./img/steak.jpg'); // https://www.pexels.com/
+  }
+}
+
+@include breakpoint(xlarge) {
+  .copySide {
+    padding: calc(var(--responsive-padding) * 4);
+  }
+  :root {
+    --button-width: #{$width-desktop};
+  }
+}
+
+@media print {
+  .button {
+    display: none;
+  }
+  .content .copySide {
+    padding: 0;
+    width: #{$width-base};
+  }
+}
