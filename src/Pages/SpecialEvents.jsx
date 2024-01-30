@@ -1,8 +1,8 @@
 import React from 'react';
 import Layout from '../components/Layout';
 import Hero from '../components/Hero';
-import Features from '../components/Features';
-import SectionContent from '../components/Section';
+import PrivateDinner from '../components/PrivateDinner';
+import Event from '../components/Event';
 import Specials from '../components/Specials';
 
 export default function SpecialEvents() {
@@ -13,7 +13,9 @@ export default function SpecialEvents() {
         src="./img/blu-homepage-mobile.jpg"
         title={'Special Events'}
       />
-      <h1 style={{ color: 'black ' }}>Special events</h1>
+      <Specials />
+      <Event />
+      <PrivateDinner />
     </>
   );
 }

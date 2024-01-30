@@ -7,7 +7,7 @@ import Specials from '../components/Specials';
 
 export default function HomePage() {
   return (
-    <>
+    <div className="grid-container">
       <Hero
         srcSet="./img/blu-homepage.jpg"
         src="./img/blu-homepage-mobile.jpg"
@@ -16,6 +16,6 @@ export default function HomePage() {
       <Features />
       <SectionContent />
       <Specials />
-    </>
+    </div>
   );
 }

@@ -112,7 +112,8 @@ h6 {
   @include prata;
 
   line-height: var(--heading-line-height);
-  margin-bottom: var(--space-xxs);
+  margin-bottom: var(--margin-xxs);
+  margin-top: var(--margin-xxs);
 }
 
 h1 {

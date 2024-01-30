@@ -32,7 +32,7 @@ export default function PrivateDinner() {
             <div
               class="uk-grid uk-child-width-1-2@l uk-flex-middle"
               uk-grid
-              uk-scrollspy="target: > div; cls: uk-animation-slide-left-medium"
+              uk-scrollspy="target: > div; cls: uk-animation-slide-left-medium; repeat: true"
             >
               <div>
                 <img src="./img/events.jpg" alt="" uk-img />
@@ -56,7 +56,7 @@ export default function PrivateDinner() {
             <div
               class="uk-grid uk-child-width-1-2@l uk-flex-middle"
               uk-grid
-              uk-scrollspy="target: > div; cls: uk-animation-slide-left-medium"
+              uk-scrollspy="target: > div; cls: uk-animation-slide-left-medium; repeat: true"
             >
               <div>
                 <img src="./img/chef-cooking2.jpg" alt="" uk-img />
@@ -78,7 +78,7 @@ export default function PrivateDinner() {
             <div
               class="uk-grid uk-child-width-1-2@l uk-flex-middle"
               uk-grid
-              uk-scrollspy="target: > div; cls: uk-animation-slide-left-medium"
+              uk-scrollspy="target: > div; cls: uk-animation-slide-left-medium; repeat: true"
             >
               <div>
                 <img src="./img/happy-hour.jpg" alt="" uk-img />

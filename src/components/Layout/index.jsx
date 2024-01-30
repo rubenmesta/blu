@@ -4,11 +4,11 @@ import Footer from '../Footer';
 
 const Layout = ({ children }) => {
   return (
-    <div className="grid-container">
+    <>
       <Header />
       {children}
       <Footer />
-    </div>
+    </>
   );
 };
 
